@@ -3,13 +3,13 @@
 ## Install
 
 ```sh
-brew install kfet/fir/fir
+brew install kfet/ai/fir
 ```
 
 Or tap explicitly:
 
 ```sh
-brew tap kfet/fir
+brew tap kfet/ai
 brew install fir
 ```
 
