@@ -11,7 +11,7 @@ class FirAT084 < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/kfet/fir-dist/releases/download/v0.84.0/fir-darwin-amd64"
-      sha256 "912ad16de2b0ecd801ae08431ca2851c6f56e0dca136617c82bbe38309666096"
+      sha256 "7a284f2813bfd4ef340270760300a892e5e7fbc044b050c8298a9be5cdcecf75"
 
       define_method(:install) do
         bin.install Dir["fir-*"].first => "fir"
@@ -21,7 +21,7 @@ class FirAT084 < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/kfet/fir-dist/releases/download/v0.84.0/fir-darwin-arm64"
-      sha256 "8711e76ce8276b3b8c5d3d352fa353a06348d1144508779167d64c14abf92a02"
+      sha256 "1d20d7f3d67885e7a93a34d5a9544cabeb2eb4e16edbb784018f38a90de9d7dd"
 
       define_method(:install) do
         bin.install Dir["fir-*"].first => "fir"
@@ -34,7 +34,7 @@ class FirAT084 < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/kfet/fir-dist/releases/download/v0.84.0/fir-linux-amd64"
-      sha256 "2e83d6eee3a750d8307fb2279233c71e35e4e7d4d3c2bfd6258eb92e0c94d924"
+      sha256 "337282c52bb2d40757ab075a1b4d3def35596ab5f8f9bdf2af44ee64a24d4cad"
       define_method(:install) do
         bin.install Dir["fir-*"].first => "fir"
         chmod 0755, bin/"fir"
@@ -43,7 +43,7 @@ class FirAT084 < Formula
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "https://github.com/kfet/fir-dist/releases/download/v0.84.0/fir-linux-armv6"
-      sha256 "654e9d6c20f5f2c2e7149b7e650d72fe0a66b302c80d31b5a5e25bd56a6f1ad5"
+      sha256 "2bcf91113750655aa9ceffebee634c1ed3a32047835938fdff12c8e92ba30c3e"
       define_method(:install) do
         bin.install Dir["fir-*"].first => "fir"
         chmod 0755, bin/"fir"
@@ -52,7 +52,7 @@ class FirAT084 < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/kfet/fir-dist/releases/download/v0.84.0/fir-linux-arm64"
-      sha256 "0dc4698f37155daf6bdd0b97813cb2111bdeb25c21d3181c96b5751d51be2204"
+      sha256 "421c7c49df2d1dc554072b99c5de0ba9efa38ea3b70d48eaba64fead6aa17c93"
       define_method(:install) do
         bin.install Dir["fir-*"].first => "fir"
         chmod 0755, bin/"fir"
