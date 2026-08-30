@@ -5,13 +5,13 @@
 class Fir < Formula
   desc "Fast, portable AI coding agent"
   homepage "https://github.com/kfet/fir"
-  version "1.3.4"
+  version "1.3.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kfet/fir-dist/releases/download/v1.3.4/fir-darwin-amd64"
-      sha256 "17dc2d89ea4751f00eba04a46cd4e4672a2502d89e8f82d7c79dee5fecca07cd"
+      url "https://github.com/kfet/fir-dist/releases/download/v1.3.5/fir-darwin-amd64"
+      sha256 "de7f03cb30832a397b61dbb466fe7a7cb1e657d3fd5ddb90d46e3fc8969084b5"
 
       define_method(:install) do
         bin.install Dir["fir-*"].first => "fir"
@@ -20,8 +20,8 @@ class Fir < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kfet/fir-dist/releases/download/v1.3.4/fir-darwin-arm64"
-      sha256 "498055075a900ac85e2d921135c0a9296ec675c8b38cd202638f346223fd85fe"
+      url "https://github.com/kfet/fir-dist/releases/download/v1.3.5/fir-darwin-arm64"
+      sha256 "8afbb124600266df7c5d04b5fc4c9381bbd48f526d11e672a3d8054adb786978"
 
       define_method(:install) do
         bin.install Dir["fir-*"].first => "fir"
@@ -33,8 +33,8 @@ class Fir < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kfet/fir-dist/releases/download/v1.3.4/fir-linux-amd64"
-      sha256 "3e9c2733b4ca961e2c0bc02ed2a27bc10335a9fd3edd4c5c30e4e7bf99051f50"
+      url "https://github.com/kfet/fir-dist/releases/download/v1.3.5/fir-linux-amd64"
+      sha256 "c894ab2b6adfe523b1a3ef8e8fa2abf0db7968ae7ccdbaaf4e61274ec0aba7cc"
       define_method(:install) do
         bin.install Dir["fir-*"].first => "fir"
         chmod 0755, bin/"fir"
@@ -42,8 +42,8 @@ class Fir < Formula
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/kfet/fir-dist/releases/download/v1.3.4/fir-linux-armv6"
-      sha256 "4c4d09d360bc1b019892de966dfc4043b696194116319505a3941c57b1c1925d"
+      url "https://github.com/kfet/fir-dist/releases/download/v1.3.5/fir-linux-armv6"
+      sha256 "92718e1471738ae9e44dcb08eb4e9eb6396452e7adbf3967021a9fcb6385e7e4"
       define_method(:install) do
         bin.install Dir["fir-*"].first => "fir"
         chmod 0755, bin/"fir"
@@ -51,8 +51,8 @@ class Fir < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kfet/fir-dist/releases/download/v1.3.4/fir-linux-arm64"
-      sha256 "e0eded0be73fbf702fe5288db93550bef4c591a59389127b610a0a907df318ec"
+      url "https://github.com/kfet/fir-dist/releases/download/v1.3.5/fir-linux-arm64"
+      sha256 "34cb9efd650c5d420b6b1e926ca8c79e5141d141897fca63e8293346604ac960"
       define_method(:install) do
         bin.install Dir["fir-*"].first => "fir"
         chmod 0755, bin/"fir"
