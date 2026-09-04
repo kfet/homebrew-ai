@@ -5,21 +5,21 @@
 class PoeAcp < Formula
   desc "HTTP relay between Poe server bots and ACP-speaking agents"
   homepage "https://github.com/kfet/poe-acp"
-  version "0.68.0"
+  version "0.68.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kfet/poe-acp/releases/download/v0.68.0/poe-acp-darwin-amd64"
-      sha256 "f0e4117c757c3f0f867380fceba438d335fd2e8affddcd2982d849e89e321b34"
+      url "https://github.com/kfet/poe-acp/releases/download/v0.68.1/poe-acp-darwin-amd64"
+      sha256 "89f589f4d7f5b376a9837e324038604c33edccceaafa44ced79fe3f1355dbdac"
 
       define_method(:install) do
         bin.install Dir["poe-acp-*"].first => "poe-acp"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kfet/poe-acp/releases/download/v0.68.0/poe-acp-darwin-arm64"
-      sha256 "d6180af5f0e934abbe60d2a2582e58563753871a267499ab3667d82bb2cd06b6"
+      url "https://github.com/kfet/poe-acp/releases/download/v0.68.1/poe-acp-darwin-arm64"
+      sha256 "459be943a687533cb39f0879a978479492f97f546aabc1e2fa849fc00a1207d7"
 
       define_method(:install) do
         bin.install Dir["poe-acp-*"].first => "poe-acp"
@@ -29,22 +29,22 @@ class PoeAcp < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kfet/poe-acp/releases/download/v0.68.0/poe-acp-linux-amd64"
-      sha256 "1b32d76e20723ab5c3cecbb27946b1155415d04b362a6b168c8f3bec1c35605c"
+      url "https://github.com/kfet/poe-acp/releases/download/v0.68.1/poe-acp-linux-amd64"
+      sha256 "639a3c692f495e68a090d2b6636cbf31a3c3d6f0cedfe02d46fe733a09e7c9ca"
       define_method(:install) do
         bin.install Dir["poe-acp-*"].first => "poe-acp"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/kfet/poe-acp/releases/download/v0.68.0/poe-acp-linux-armv6"
-      sha256 "35e3bb8b8ce231307a24cecda99ef2d0c0220e233495cd4bc0cd2adf90018348"
+      url "https://github.com/kfet/poe-acp/releases/download/v0.68.1/poe-acp-linux-armv6"
+      sha256 "a20779614e43864560e3eab093c488d45e2fb0dbcb75803bbbb576ba889c95e3"
       define_method(:install) do
         bin.install Dir["poe-acp-*"].first => "poe-acp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kfet/poe-acp/releases/download/v0.68.0/poe-acp-linux-arm64"
-      sha256 "dc7315c8133560ca9676c457b307f2654f9337ad0d57f8af82c8f8276c970899"
+      url "https://github.com/kfet/poe-acp/releases/download/v0.68.1/poe-acp-linux-arm64"
+      sha256 "e7d0e0c4fd8f315afcf61314c70f34f396f198f5f01f5a23cbb1d4e86e6db520"
       define_method(:install) do
         bin.install Dir["poe-acp-*"].first => "poe-acp"
       end
