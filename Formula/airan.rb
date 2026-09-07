@@ -5,21 +5,21 @@
 class Airan < Formula
   desc "The env for AI coding agents — a shebang dispatcher for agent files"
   homepage "https://github.com/kfet/airan"
-  version "0.1.4"
+  version "0.1.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kfet/airan/releases/download/v0.1.4/airan-darwin-amd64"
-      sha256 "4dc7d01c1290f0d2f3368564cc1c7dea2426556c6a69d57f63a1f8330ccf6a9c"
+      url "https://github.com/kfet/airan/releases/download/v0.1.5/airan-darwin-amd64"
+      sha256 "faf79fc76d61b948830a1da286ac71b60ca476a316f3cde53d2d5cd36378ae28"
 
       define_method(:install) do
         bin.install Dir["airan-*"].first => "airan"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kfet/airan/releases/download/v0.1.4/airan-darwin-arm64"
-      sha256 "84fcd736b80f3c2caca0872c5b05b5cb87c881e8fa1711b11d657efecedc3100"
+      url "https://github.com/kfet/airan/releases/download/v0.1.5/airan-darwin-arm64"
+      sha256 "ec31dc42739b5cd637f7e165e19f2e56ea88ca2355da2c6a7911aee478179ce2"
 
       define_method(:install) do
         bin.install Dir["airan-*"].first => "airan"
@@ -29,22 +29,22 @@ class Airan < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kfet/airan/releases/download/v0.1.4/airan-linux-amd64"
-      sha256 "d1d6354107cb69ce7365a1696ae407966b54cbdf61626cd6a440bf7c154f82d1"
+      url "https://github.com/kfet/airan/releases/download/v0.1.5/airan-linux-amd64"
+      sha256 "116488bc515a4ae7b2b5a9b01c1996ab0cd8d418469c6836ece9bd4bc1c0f314"
       define_method(:install) do
         bin.install Dir["airan-*"].first => "airan"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/kfet/airan/releases/download/v0.1.4/airan-linux-arm"
-      sha256 "4caf04c105a7bd836f338b60a98dfff57caef57df95e0497e114cbd7b9bacbe7"
+      url "https://github.com/kfet/airan/releases/download/v0.1.5/airan-linux-arm"
+      sha256 "db2e22175770cee6a1001b7fd004011014bc371ab25084ff93903afd8613dcf5"
       define_method(:install) do
         bin.install Dir["airan-*"].first => "airan"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kfet/airan/releases/download/v0.1.4/airan-linux-arm64"
-      sha256 "614f707a605ec234ccfbbaf609adde61331ce24886408fab2eebf526769976c0"
+      url "https://github.com/kfet/airan/releases/download/v0.1.5/airan-linux-arm64"
+      sha256 "df647b212fb98184aefac00a8699b073cf9a608c52a0aafdee2f1d400e26812d"
       define_method(:install) do
         bin.install Dir["airan-*"].first => "airan"
       end
