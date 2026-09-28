@@ -5,21 +5,21 @@
 class SlackAcp < Formula
   desc "Slack bot that relays each thread to a spawned ACP-speaking agent"
   homepage "https://github.com/kfet/slack-acp"
-  version "0.10.0"
+  version "0.10.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kfet/slack-acp/releases/download/v0.10.0/slack-acp-darwin-amd64"
-      sha256 "529169f7b15689c73b387cd5e9f811885a6f17c51d4b5a4eba54a95b79e0a02d"
+      url "https://github.com/kfet/slack-acp/releases/download/v0.10.1/slack-acp-darwin-amd64"
+      sha256 "fdb92786f622ecb27d3e6b359e531065a6ca8b5705ddb1c2aba69c46b3ae98c5"
 
       define_method(:install) do
         bin.install Dir["slack-acp-*"].first => "slack-acp"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kfet/slack-acp/releases/download/v0.10.0/slack-acp-darwin-arm64"
-      sha256 "1186ae53f39f18bd88d68afb308dbb370ae2cee3af1fdc29b73b7cdc149e8928"
+      url "https://github.com/kfet/slack-acp/releases/download/v0.10.1/slack-acp-darwin-arm64"
+      sha256 "2ae14dc746620b9bb5b5c7a64d32aac77f9dc2d16d9b45281af53a7cab0948e7"
 
       define_method(:install) do
         bin.install Dir["slack-acp-*"].first => "slack-acp"
@@ -29,22 +29,22 @@ class SlackAcp < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kfet/slack-acp/releases/download/v0.10.0/slack-acp-linux-amd64"
-      sha256 "e826c32f0499e722b05267dde528ac88265e00cf8838bba2a86b2481e8d3afd9"
+      url "https://github.com/kfet/slack-acp/releases/download/v0.10.1/slack-acp-linux-amd64"
+      sha256 "1718205eda49910330ebd514c2f43265815ddd024019b7b998cc1866e3c3b8fe"
       define_method(:install) do
         bin.install Dir["slack-acp-*"].first => "slack-acp"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/kfet/slack-acp/releases/download/v0.10.0/slack-acp-linux-armv6"
-      sha256 "0fe8339a95dc500f4f487caa6a081d05a91bcde810df9976842cfc22629ef262"
+      url "https://github.com/kfet/slack-acp/releases/download/v0.10.1/slack-acp-linux-armv6"
+      sha256 "fcaeac2c6925d89ee99bd53424f265f8ea7026d003361abda807f09b0dd9fa02"
       define_method(:install) do
         bin.install Dir["slack-acp-*"].first => "slack-acp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kfet/slack-acp/releases/download/v0.10.0/slack-acp-linux-arm64"
-      sha256 "42a304985c83cedb5bfb6f3da5e9b894214713d5697c16defdbc0217b612ea9c"
+      url "https://github.com/kfet/slack-acp/releases/download/v0.10.1/slack-acp-linux-arm64"
+      sha256 "f99710728af9130ea56a12653db03e6db7a40ed1f3227c841896ec6c098f00eb"
       define_method(:install) do
         bin.install Dir["slack-acp-*"].first => "slack-acp"
       end
