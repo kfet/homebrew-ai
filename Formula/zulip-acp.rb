@@ -5,21 +5,21 @@
 class ZulipAcp < Formula
   desc "Relay between a self-hosted Zulip server and ACP-speaking agents"
   homepage "https://github.com/kfet/zulip-acp"
-  version "0.42.0"
+  version "0.43.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kfet/zulip-acp/releases/download/v0.42.0/zulip-acp-darwin-amd64"
-      sha256 "44725f39166c1b1f6fb18521979bf80290f922392f7a7e1587684e33e22efbe3"
+      url "https://github.com/kfet/zulip-acp/releases/download/v0.43.0/zulip-acp-darwin-amd64"
+      sha256 "28e05fa7354f3fa353a031c43fab8013f69b051cf790a8b2b60a481354def00f"
 
       define_method(:install) do
         bin.install Dir["zulip-acp-*"].first => "zulip-acp"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kfet/zulip-acp/releases/download/v0.42.0/zulip-acp-darwin-arm64"
-      sha256 "d7b461e1c65dc1119600b440f3109358ea14f17ff5552f09b07e338660a23f9e"
+      url "https://github.com/kfet/zulip-acp/releases/download/v0.43.0/zulip-acp-darwin-arm64"
+      sha256 "44b9c02b8544f86584cbafcb2e74586ebeea7262f8511e2fda3c8834d53038ec"
 
       define_method(:install) do
         bin.install Dir["zulip-acp-*"].first => "zulip-acp"
@@ -29,22 +29,22 @@ class ZulipAcp < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kfet/zulip-acp/releases/download/v0.42.0/zulip-acp-linux-amd64"
-      sha256 "a2d263773b66e74492fefe1f5cd5541adb56233e68c1981f847a987269df1233"
+      url "https://github.com/kfet/zulip-acp/releases/download/v0.43.0/zulip-acp-linux-amd64"
+      sha256 "c352002a140444b145f38a9d30fccb8b96ac4492dd4c5656fabe78ab8acf6185"
       define_method(:install) do
         bin.install Dir["zulip-acp-*"].first => "zulip-acp"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/kfet/zulip-acp/releases/download/v0.42.0/zulip-acp-linux-armv6"
-      sha256 "8bdbb71ac1b22d37670e5c701a31fbf331dadbf24ea57bd517d2deba62e5e884"
+      url "https://github.com/kfet/zulip-acp/releases/download/v0.43.0/zulip-acp-linux-armv6"
+      sha256 "a7bd0d8a229cbb401d0ab86c8c75e4d4111f0dc5d5139fea1eaa91fca423e79b"
       define_method(:install) do
         bin.install Dir["zulip-acp-*"].first => "zulip-acp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kfet/zulip-acp/releases/download/v0.42.0/zulip-acp-linux-arm64"
-      sha256 "3e12b07b5419c1d0e2ba028193584ab233182d8c6343e065a650f149c48464b8"
+      url "https://github.com/kfet/zulip-acp/releases/download/v0.43.0/zulip-acp-linux-arm64"
+      sha256 "3ec047259385e38c73e0bd3b268d7766fed1a79086680c4193139c80bb7749fd"
       define_method(:install) do
         bin.install Dir["zulip-acp-*"].first => "zulip-acp"
       end
